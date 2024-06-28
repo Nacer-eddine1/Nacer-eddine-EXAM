@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+<head>
+    <title>Jokes</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'joke_list' %}">List Jokes</a></li>
+                    <li><a href="{% url 'joke_create' %}">Create Joke</a></li>
+                    <li>
+                        <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                    <li><a href="{% url 'login' %}">Sign In</a></li>
+                    <li><a href="{% url 'joke_list' %}">List Jokes</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

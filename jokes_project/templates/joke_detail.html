@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>{{ object.question }}</h2>
+  <p>{{ object.answer }}</p>
+  <a href="{% url 'joke_update' object.pk %}">Edit</a>
+  <a href="{% url 'joke_delete' object.pk %}">Delete</a>
+{% endblock %}

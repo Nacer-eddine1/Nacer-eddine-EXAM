@@ -1,0 +1,82 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 32px;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0px auto;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a,
+nav ul li button {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    background-color: #555;
+}
+
+nav ul li form {
+    display: inline; /* Ensure the form is inline */
+}
